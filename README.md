@@ -38,15 +38,3 @@ bfx-portfolio/
 ├─ case-studies/ - Applied examples and analyses
 ├─ cheat-sheet/ - Quick reference guides and key concepts
 ```
-
-## How to Use This Repository
-* Browse sections based on your task (tool selection, workflows, etc.)
-* Use the **cheat sheet** for quick reference
-* Explore **case studies** for real-world examples
-* Treat this as a growing resource, rather than a static document
-
-## Future Development
-* Adding new tools and databases
-* Refining workflows
-* Expanding case studies
-* Improving clarity and usability
