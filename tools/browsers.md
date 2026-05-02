@@ -12,25 +12,24 @@ This section highlights three widely used browsers:
 # UCSC Genome Browser  
 
 ## Overview  
-The [UCSC Genome Browser](https://genome.ucsc.edu/cgi-bin/hgGateway) is one of the most widely used tools for visualizing genomic regions and integrating biological data. It allows users to layer multiple datasets—such as gene annotations, conservation, regulatory elements, and variants—into a single, customizable view.
+The [UCSC Genome Browser](https://genome.ucsc.edu/cgi-bin/hgGateway) is one of the most widely used tools for visualizing genomic regions and integrating biological data. It allows users to layer multiple datasets such as gene annotations, conservation, regulatory elements, and variants into a single, customizable view.
 
 ![UCSC Main Interface](../images/ucsc/main-page.png)  
-*UCSC Genome Browser landing page.*
+*UCSC Genome Browser landing page*
 
-## When to Use  
-I typically use UCSC when I want to:
+## When to Use
 - Explore gene structure (exons, introns, alternative splicing)  
 - Visualize a genomic region in detail  
 - Investigate regulatory elements (promoters, enhancers)  
 - Examine conservation across species  
 - View known variants in genomic context
 
-## Key Features  
-- **Track System** → Layer multiple datasets in one view  
-- **Genome Navigation** → Search by gene, coordinates, or variant  
-- **Custom Tracks** → Upload and visualize your own data  
-- **Comparative Genomics** → Multi-species conservation tracks  
-- **Database Integration** → Links to external datasets and annotations
+## Key Features
+- Track System → Layer multiple datasets in one view  
+- Genome Navigation → Search by gene, coordinates, or variant  
+- Custom Tracks → Upload and visualize your own data  
+- Comparative Genomics → Multi-species conservation tracks  
+- Database Integration → Links to external datasets and annotations
 
 ## Example Workflow  
 ### Goal: Investigate a gene and its surrounding genomic features  
@@ -52,32 +51,33 @@ I typically use UCSC when I want to:
 ![BRCA1 UCSC View](../images/ucsc/brca1-overview.png)  
 *UCSC Genome Browser view of the BRCA1 region.*
 
+## Example Workflow  (Module 01)
+### Goal: Extract the DNA sequence of the ApoE gene using the UCSC genome browser
+1. Click to choose “Genomes => Human GRCh38/hg38”
+
+![Choose Genome](../images/ucsc/extract-1.png)
+2. Type APOE in the search box
+
+![Choose Gene](../images/ucsc/extract-2.png)
+
+3. Click to choose “View => DNA Sequence”
+
+![View DNA Sequence](../images/ucsc/extract-3.png)
+
+4. Click "Get DNA", a FASTA file will be produced
+
+![FASTA](../images/ucsc/extract-4.png)
+
 ## Key Track Types
 
-### Gene Annotation (GENCODE, RefSeq, MANE)
-- Defines exon-intron structure and transcript isoforms  
-- Foundation for interpreting all other tracks  
-- MANE Select = standardized transcript  
-
-### Variants (dbSNP, ClinVar, gnomAD)
-- dbSNP → known variants  
-- ClinVar → clinical significance  
-- gnomAD → population frequency  
-
-### Conservation (100 Vertebrates)
-- Highlights evolutionarily conserved regions  
-- Often indicates functional importance  
-
-### Regulation (ENCODE, H3K27ac)
-- Identifies promoters and enhancers  
-- H3K27ac marks active regulatory regions  
-
-### Expression (GTEx)
-- Shows tissue-specific expression patterns  
-
-### Repeats (RepeatMasker)
-- Identifies repetitive DNA regions  
-- Important for alignment and variant interpretation
+| Track Category | Examples | Purpose | Key Insight |
+|----------------|----------|---------|-------------|
+| **Gene Annotation** | GENCODE, RefSeq, MANE | Defines exon–intron structure and transcript isoforms | Foundation for interpreting all other tracks; MANE Select provides a standardized transcript |
+| **Variants** | dbSNP, ClinVar, gnomAD | Catalogs genetic variation | dbSNP = known variants; ClinVar = clinical significance; gnomAD = population frequency |
+| **Conservation** | 100 Vertebrates | Measures evolutionary conservation | Highly conserved regions often indicate functional importance |
+| **Regulation** | ENCODE, H3K27ac | Identifies regulatory elements | Promoters and enhancers; H3K27ac marks active regulatory regions |
+| **Expression** | GTEx | Displays gene expression across tissues | Reveals tissue-specific expression patterns |
+| **Repeats** | RepeatMasker | Identifies repetitive DNA elements | Important for alignment accuracy and variant interpretation |
 
 ## Interpretation
 - **Gene + conservation** → likely functional regions  
@@ -93,7 +93,8 @@ I typically use UCSC when I want to:
 ## Notes / Tips  
 - Turning tracks on/off is key to avoiding clutter  
 - Save sessions when doing deeper analysis  
-- Most powerful when combined with external databases  
+- Most powerful when combined with external databases
+- The most recently completed reference genome is T2T (2022). However, GRCh38 (2013) is still most commonly used.
 
 ---
 
@@ -108,7 +109,7 @@ I typically use UCSC when I want to:
 ## When to Use
 - Detailed transcript isoform information  
 - Variant effect predictions  
-- Cross-species comparisons (orthologs)  
+- Cross-species comparisons
 - Reliable gene annotation across organisms
 
 ## Key Features  
