@@ -33,8 +33,8 @@ This work is intended to complement my current career, while also serving as a l
 ```
 bfx-portfolio/
 ├─ tools/ - Genome browser and databases
-├─ databases/ - public genomic resources (e.g., variant and regulatory databases)
 ├─ workflows/ - DNA-seq, RNA-seq, and related pipelines
 ├─ case-studies/ - Applied examples and analyses
 ├─ cheat-sheet/ - Quick reference guides and key concepts
+├─ images/ - Relevant images for .md 
 ```
