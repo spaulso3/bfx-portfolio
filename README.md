@@ -10,7 +10,7 @@ My goal is for this to function as both:
 * A professional portfolio showcasing my bioinformatics skills
 * A practical "cheat sheet" that I can return to throughout my career
 
-Rather than simply documenting concepts, this portfolio focuses on how bioinformtatics tools, databases, and workflows are actually used in practice. I designed it to be something I can revisit, expand, and refine as my BFX experience grows and my interests evolve. 
+Rather than simply documenting concepts, this portfolio focuses on how bioinformatics tools, databases, and workflows are actually used in practice. I designed it to be something I can revisit, expand, and refine as my BFX experience grows and my interests evolve. 
 
 ## Scope
 This repository include key tools and approaches used in genome analysis, including:
