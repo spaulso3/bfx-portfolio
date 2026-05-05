@@ -2,12 +2,7 @@
 
 Public genome databases provide access to large-scale biological datasets that support gene annotation, variant interpretation, and functional genomics.  
 
-In practice, I don’t use these in isolation. They’re most useful when combined with genome browsers (especially UCSC) to add context to what I’m seeing.
-
-This section covers three key resources:
-- [ENCODE](https://www.encodeproject.org/) (functional genomics)
-- [ClinVar](https://www.ncbi.nlm.nih.gov/clinvar/) (clinical variation)
-- [gnomAD](https://gnomad.broadinstitute.org/) (population variation)
+I don’t use these in isolation. They’re most useful when combined with genome browsers (especially UCSC) to add context to what I’m seeing.
 
 ---
 
@@ -162,14 +157,104 @@ gnomAD results for the FLG gene
 
 ---
 
+# dbSNP
+
+## Overview  
+[dbSNP](https://www.ncbi.nlm.nih.gov/snp/) (Database of Single Nucleotide Polymorphisms) is a public repository that catalogs short genetic variants, including single nucleotide polymorphisms (SNPs) and small insertions/deletions (indels).
+
+## Type of Data  
+- SNPs and small indels  
+- Reference variant identifiers (rsIDs)  
+- Basic allele frequency information (limited)  
+- Links to other databases (ClinVar, gnomAD, etc.)
+
+## Use Cases
+- Identify known variants using rsIDs (e.g., rs123456)  
+- Cross-reference variants across databases  
+- Distinguish novel vs previously reported variants  
+- Provide standardized variant identifiers for analysis  
+
+## Interpretation Tips  
+- dbSNP is not clinical, presence does not imply disease  
+- Many variants are neutral polymorphisms  
+- Use rsIDs to link across ClinVar and gnomAD  
+- Some entries may lack detailed annotation  
+
+## Limitations  
+- Minimal clinical interpretation  
+- Contains both benign and disease-associated variants  
+- Quality varies depending on submission source  
+
+---
+
+# ClinGen
+
+## Overview  
+[ClinGen](https://clinicalgenome.org/) (Clinical Genome Resource) is an NIH-supported resource that provides expert-curated interpretations of gene-disease relationships and variant pathogenicity.
+
+## Type of Data  
+- Expert-reviewed gene-disease validity  
+- Dosage sensitivity (haploinsufficiency/triplosensitivity)  
+- Variant classification frameworks  
+- Clinical interpretation guidelines  
+
+## Use Cases
+- Evaluate strength of gene-disease associations  
+- Support clinical variant classification decisions  
+- Identify dosage-sensitive genes  
+- Resolve conflicting ClinVar interpretations  
+
+## Interpretation Tips  
+- Curated by expert panels → higher confidence than crowd submissions  
+- Gene-level evidence is often more stable than variant-level data  
+- Useful for clinical genomics workflows  
+- Strong complement to ClinVar  
+
+## Limitations  
+- Not all genes have curated reviews  
+- Coverage is incomplete for rare genes  
+- Focused on clinical relevance rather than discovery  
+
+---
+
+# OMIM
+
+## Overview  
+[OMIM](https://www.omim.org/) (Online Mendelian Inheritance in Man) is a comprehensive catalog of human genes and genetic disorders, focusing on Mendelian (single-gene) traits.
+
+## Type of Data  
+- Gene-disease relationships  
+- Mendelian inheritance patterns  
+- Clinical phenotypes  
+- Literature-curated summaries  
+
+## Use Cases
+- Identify diseases associated with a gene  
+- Understand inheritance patterns (dominant, recessive, etc.)  
+- Explore phenotype descriptions  
+- Support clinical interpretation of variants  
+
+## Interpretation Tips  
+- Strong focus on well-established Mendelian conditions  
+- Highly curated but literature-dependent  
+- Useful for phenotype matching in clinical genetics  
+- Often used alongside ClinGen and ClinVar  
+
+## Limitations  
+- Limited coverage of complex/polygenic traits  
+- May lag behind newest discoveries  
+- Focuses on established disease associations
+---
+
 # How I Use These Together  
 
-In practice, these databases complement each other:
+These databases function best when combined:
 
-- gnomAD → “Is this variant rare?”  
-- ClinVar → “Has this been linked to disease?”  
-- ENCODE → “Could this affect gene regulation?”  
-
-Combined with a genome browser (like UCSC), they form a basic workflow for variant interpretation.
+- **dbSNP** → “Has this variant been observed before?”  
+- **gnomAD** → “How common is it in populations?”  
+- **ClinVar** → “Is it clinically associated with disease?”  
+- **ClinGen** → “How strong is the gene-disease evidence?”  
+- **OMIM** → “What phenotype is associated with this gene?”  
+- **ENCODE** → “Could this region be regulatory or functional?”  
 
 ---
